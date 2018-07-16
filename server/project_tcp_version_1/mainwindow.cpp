@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+
+
+
     /*
     tcpServer = new QTcpServer(this);
     if(!tcpServer->listen(QHostAddress::LocalHost,6666))  //监听本地的6666端口，如果出错就关闭
@@ -61,13 +64,14 @@ void MainWindow::sendMessage()
 
     //发送数据成功后，显示提示
     ui->showIfConnected->setText("connect sucessful");
+
     ui->statuslabel->setText("send message successful");
 }
 
 void MainWindow::on_begin_listen_clicked()
 {
     tcpServer = new QTcpServer(this);
-    if(!tcpServer->listen(QHostAddress::LocalHost,6666))  //监听本地的6666端口，如果出错就关闭
+    if(!tcpServer->listen(QHostAddress::LocalHost,6666))  //监听本地的6666端口，如果出错就关闭dasdas
     {
         qDebug() << tcpServer->errorString();
         close();
