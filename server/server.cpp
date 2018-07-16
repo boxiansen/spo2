@@ -3,7 +3,7 @@
 
 server::server()
 {
-    qDebug() << "start";
+    qDebug() << "start";//打印
     qServer = new QTcpServer();
     qServer->listen(QHostAddress::Any, 7777);
     connect(qServer, SIGNAL(newConnection()), this, SLOT(acceptConn()));
